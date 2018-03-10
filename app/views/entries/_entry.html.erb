@@ -1,0 +1,7 @@
+<div>
+  <h2><%= link_to entry.title, entry_path(entry) %></h2>
+
+  <small><em><%= entry.pulished %></em></small>
+
+  <p><%= truncate(strip_tags(entry.content), length: 600) %></p>
+</div>

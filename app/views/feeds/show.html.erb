@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @feed.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @feed.url %>
+</p>
+
+
+<% @rss.items.each do |item| %>
+  <b><%= item.title %> </b>
+  <p><%= item.description.html_safe %> </p>
+  <%= item.date %>
+  <br>
+
+<% end %>
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
+<%= link_to 'Back', feeds_path %>

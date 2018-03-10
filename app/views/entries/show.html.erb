@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre: </strong>
+  <%= @entry.title %>
+</p>
+
+<p>
+  <strong>Publié le: </strong>
+  <%= @entry.pulished %>
+</p>
+
+<p>
+  <strong>Contenu: </strong>
+  <%= @entry.content.html_safe %>
+</p>
+
+<p>
+  <strong>Lien: </strong>
+  <%= @entry.url %>
+</p>
+
+<p>
+  <% if @entry.lu %>
+  lu
+  <% else %>
+non lu
+  <% end %>
+</p>
+
+<div class="btn btn-danger">
+  <%= link_to 'Accueil', entries_path,  {:style=>'color:#FFFFFF;', :class => "css_class"} %>
+</div>
